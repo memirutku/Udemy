@@ -17,3 +17,6 @@ print("Hello World")
 
 # python:bulunduğumuz klasörde python dosyası varsa python(boşluk)main.py(ya da python dosyasının adı ne ise) yazarsak dosyayı çalıştırabiliriz.
 
+# internet üzerinden eklediğimiz kütüphaneler ve pythonun kendi kütüphaneleri import komutu ile çalışır (import numpy gibi)
+
+#terminale gilip pip install ile yükleye biliriz (pip install numpy)
