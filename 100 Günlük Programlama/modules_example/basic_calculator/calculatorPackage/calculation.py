@@ -1,11 +1,12 @@
 
-def plus():
+def plus(x: int,y: int ):
+ return x+y
 
+def minus(x: int,y: int ):
+ return x-y
 
-def minus():
+def multiply(x: int,y: int ):
+    return x*y
 
-
-def multiply():
-
-
-def divide():
+def divide(x: int,y: int ):
+    return x/y
