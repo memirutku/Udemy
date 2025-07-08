@@ -5,4 +5,5 @@ void main(List<String> args) {
   print("mustafa' nın çalışması");
   print("mustafa\"nın çalışması"); // çift tırnak içinde çift tırnak kullanımı
   print('mustafa\'nın çalışması'); // tek tırnak içinde tek tırnak kullanımı
+  print("mustafa " + "çalışması"); // string birleştirme
 }
