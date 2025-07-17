@@ -50,6 +50,7 @@ String selamVer(int yas, {String? isim, String soyisim = "Adana"}) {
   return "Merhaba $isim $soyisim";
 }
 
-int hacimHeaspla({int en=0,int boy=0,int  yukseklik=0}) { // istersen int ya da double de yazabilirsin. ya da hiç yazmayabilirsin. sıkıntı olmaz. ama yazarsan daha okunabilir olur. ve uygulamada daha iyi olur.
+int hacimHeaspla({int en = 0, int boy = 0, int yukseklik = 0}) {
+  // istersen int ya da double de yazabilirsin. ya da hiç yazmayabilirsin. sıkıntı olmaz. ama yazarsan daha okunabilir olur. ve uygulamada daha iyi olur.
   return en * boy * yukseklik;
 }
