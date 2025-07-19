@@ -22,6 +22,10 @@ void main(List<String> args) {
     'Mehmet': 78,
     'Fatma': 92,
   }; // Map tanımlama, key türü String, value türü int
+ Map <String,int> ogrenciler2=Map(); // Boş bir Map tanımlama, key türü String, value türü int
+ // ya da
+ Map <String,int> ogrenciler3={}; // Boş bir Map tanımlama, key türü String, value türü int
+
 
   // Map elemanlarını yazdırma
   print('Öğrenciler: $ogrenciler'); // Öğrenciler: {Ali: 85, Ayşe: 90, Mehmet: 78, Fatma: 92}
@@ -31,7 +35,7 @@ void main(List<String> args) {
   // Ali'nin notu: 85
 
   // Map'e eleman ekleme
-  ogrenciler['Ahmet'] = 88; // Map'e eleman ekleme
+  ogrenciler['Ahmet'] = 88; // Map'e eleman ekleme burada öğrencilere Ahmet diye bir key ekliyoruz ve value olarak 88 veriyoruz.
   print('Öğrenciler (Ahmet eklendikten sonra): $ogrenciler');
 
   // Map'ten eleman silme
@@ -42,7 +46,29 @@ void main(List<String> args) {
   bool varMi = ogrenciler.containsKey('Ayşe'); // Map'te key var mı
   print('Map içinde Ayşe var mı? $varMi'); // Map içinde Ayşe var mı?
 
+
+for(String key in ogrenciler.keys){ // Map'teki tüm key'leri yazdırma
+  print('Key: $key'); // Key: Ali, Key: Ayşe, Key: Fatma, Key: Ahmet
+  print("Value: ${ogrenciler[key]}"); // Value: 85, Value: 90, Value: 92, Value: 88
+}
+
+for(dynamic value in ogrenciler.values){ // Map'teki tüm value'leri yazdırma //yerleri belli değil de dinamik olduğu için dynamic kullanıyoruz.
+  print('Value: $value'); // Value: 85, Value: 90, Value: 92, Value: 88
+}
+
+// çiftleri yazdırma
+for (var entry in ogrenciler.entries) { // Map'teki tüm key-value çiftlerini yazdırma entry hem key hem de value'yu tutar.
+  print('Key: ${entry.key}, Value: ${entry.value}'); // Key: Ali, Value: 85
+} // Key: Ayşe, Value:
+
+// hem key hem value var mı  yok mu bakabiliriz.
+ogrenciler.containsKey('Fatma'); // Map'te key var mı
+  print('Map içinde Fatma var mı? $varMi'); // Map içinde Fatma
+ogrenciler.containsValue(92); // Map'te value var mı
+  print('Map içinde 92 var mı? ${ogrenciler.containsValue(92)}'); // Map içinde 92 var mı? true
+
   // Map'i temizleme
   ogrenciler.clear(); // Map'i temizleme
   print('Öğrenciler (temizlendikten sonra): $ogrenciler'); // Öğrenciler (temizlendikten sonra): {}
+
 }
