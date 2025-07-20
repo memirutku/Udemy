@@ -31,5 +31,14 @@ var sonListe2 = [...tekSayilar, ...ciftSayilar]; // Spread operator ile tek ve �
   print(sonListe2); // [1, 3, 5, 7, 9, 2, 4, 6, 8, 10]
 
 
+// Bunları maplar ve setler için de kullanabiliriz.
+  var set1 = {1, 2, 3};
+  var set2 = {4, 5, 6};
+  var set3 = {...set1, ...set2}; // Spread operator ile set birleştirme
+  print(set3); // {1, 2, 3, 4, 5, 6}
 
+  var map1 = {'a': 1, 'b': 2};
+  var map2 = {'c': 3, 'd': 4};
+  var map3 = {...map1, ...map2}; // Spread operator ile map birleştirme
+  print(map3); // {a: 1, b: 2, c: 3, d: 4}
 }
