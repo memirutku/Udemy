@@ -69,7 +69,7 @@ class Araba {
 
 */
 
-/*
+  /*
   // Parametreli kurucu metot
   Araba(int? modelYili, String? marka, bool? otomatikMi) {
     //ilk olarak bunlar buraya geliyor ama buradan gitmiyor bir yere.
@@ -87,8 +87,10 @@ class Araba {
     print("Araba sınıfından bir nesne oluşturuldu: $marka $modelYili");
   }
 */
-//üstekinden öğrendiğimizin sadeleştirikmiş hali
-  Araba(this.modelYili, this.marka, this.otomatikMi) { // burada ki this direkt sınıf değişkeni
+  //üstekinden öğrendiğimizin sadeleştirikmiş hali
+  // bu addan bir tane yapabiliriz ama isimlendirilmiş kurucu metotlar ile birden fazla yapabiliriz.
+  Araba(this.modelYili, this.marka, this.otomatikMi) {
+    // burada ki this direkt sınıf değişkeni
     // Bu şekilde de kurucu metot tanımlayabiliriz. bu şekilde daha kısa
     print("Araba sınıfından bir nesne oluşturuldu: $marka $modelYili");
   }
@@ -99,9 +101,21 @@ class Araba {
     );
   }
 
+  // kurucu method bir nesne ürtetiğimizde tetiklenen ilk methoddur.
+  // İsimlendirilmiş kurucu metot
+  //fonksiyon gibi düşünebiliriz.
+  Araba.sadeceMarka(this.marka) {
+    // Bu şekilde de isimlendirilmiş kurucu metot tanımlayabiliriz.
+    print("Sadece marka bilgisi alındı: $marka");
+  }
   void yasHesapla() {
-    print(
-      "Arabanın yaşı ${2021 - modelYili!}",
-    ); // ! ile null kontrolü yapıyoruz.
+    if (modelYili == null) {
+      print("Model yılı bilgisi yok.");
+      return; // Eğer modelYili null ise işlemi sonlandırır.
+    } else {
+      print(
+        "Arabanın yaşı ${2021 - modelYili!}",
+      ); // ! ile null kontrolü yapıyoruz.}
+    }
   }
 }
