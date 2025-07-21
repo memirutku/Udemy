@@ -41,6 +41,8 @@ class Ogrenci {
     }
   }
 
+
+
 //ama yine de return kullanmak istiyorsak factory kurucu metot kullanabiliriz.
   factory Ogrenci.factoryKurucu(int id, String ad) { // factoryKurucu ismini örnek için yazdık farklı olabilir.
  // if de kullanabiliriz.
