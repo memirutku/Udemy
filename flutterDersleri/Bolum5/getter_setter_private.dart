@@ -9,6 +9,7 @@
  */
 
 import "veritabani_islemleri.dart"; // diğer dosyadan sınıfı kullanabilmek için import ediyoruz.
+import "musteri.dart"; // diğer dosyadan sınıfı kullanabilmek için import ediyoruz.
 
 void main(List<String> args) {
   VeritabaniIslemleri veritabani =
@@ -23,4 +24,16 @@ void main(List<String> args) {
   // _ yaptıktan sonra bu değişkenlere erişemeyiz.
   // print(veritabani._kullaniciAdi); // hata verir çünkü _ ile tanımladık ve private değişkenler sınıf dışından erişilemez.
   //veritabani._internetVarMi(); // hata verir çünkü _ ile tanımladık ve private fonksiyonlar sınıf dışından erişilemez.
+
+
+
+  // getter setter
+  Musteri m1 = Musteri(123);
+  m1.bilgileriYazdir(); // Müşteri numarasını yazdır
+
+  m1.musteriNoAta =
+      350; //setter ise metodu eşittir ile direkt değer atayabiliyoruz. Fonksiyon olsaydı parantez ile çağırmamız gerekirdi.
+
+  m1.musteriNoSoyle; // getter ile müşteri numarasını alıyoruz. Fonksiyon olsaydı parantez ile çağırmamız gerekirdi.
+  print(m1.musteriNoSoyle); // Müşteri numarasını yazdır
 }
