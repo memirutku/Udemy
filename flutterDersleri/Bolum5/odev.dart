@@ -64,7 +64,6 @@ class cemberDaire {
 // anladığım olay şu get ve set aynı şey aslında değer verip iş yapacak isen set yapıyorsun değer vermeyip iş yaptıracak isen get yapıyorsun. ikisi de return ediyor çünkü
 // normalde privite değişkene gidemiyorsun o yüzden get ve set kullanıyoruz aslında içinde private değişken kullanma okunaklılığın önemi gibi gibi.
 
-
 // setterlerde void ise return yazabiliyoruz sadece değer alıp değerle bir işlem yapma olayı setterlerde oluyor aslında. return get ile oluyor.
 // void ile return yapsan bile get ile return yapman öneriliyor. Daha sağlıklı.
 // seter da return print gibi şeylerde kullanırsak ok yoksa normal değer döndüremiyoruz.
@@ -72,6 +71,33 @@ class cemberDaire {
 // 2. Soru
 //Ogrenci isimli sınıf oluşturun. Bu sınıfta ogrencinin idsi ve not değeri tutulmalı. 100 elemanlı bir listede id ve not değerlerini rastgele olusturarak bu ogrencileri saklayın ve bu ogrencileri yazdıran bir metot yazın
 
+import 'dart:math';
+
 void main(List<String> args) {
-  
+  //List <int> ogrenciler = List.generate(100, (index) => Random().nextInt(101));
+  //List<int> notlar = List.generate(100, (index) => Random().nextInt(101));
+
+  //Rastgele öğrenci id si ve öğrenci notları
+  Map<String, int> okulKisi = {};
+  for (int i = 0; i < 100; i++) {
+    okulKisi["key$i"] = Random().nextInt(100);
+  }
+
+  //var ogrenciPrint = ogrenci(kisi.key, kisi.value);
+  for (var kisi in okulKisi.entries) {
+    ogrenci ogrenciPrint = ogrenci(kisi.key, kisi.value);
+    ogrenciPrint.ogrenciYazdir;
+  }
+}
+
+class ogrenci {
+  String? _id;
+  int? _not;
+
+  ogrenci(String id, int not) {
+    _id = id;
+    _not = not;
+  }
+
+  void get ogrenciYazdir => print("Öğrencinin adi: $_id Notu: $_not");
 }
