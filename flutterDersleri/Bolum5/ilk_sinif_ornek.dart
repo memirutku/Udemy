@@ -17,7 +17,7 @@ void main(List<String> args) {
   emre.ogrAd = "Emre";
   emre.aktifMi = "Aktif";
   emre.dersCalis(); // emre nesnesinin dersCalis methodunu çağırdık.
-  
+
   //aslında emre başına class adını yazarak o classa eşlememiz lazım ki  çağırabilelim.
   //bu tarz biraz garip ama böyle kullanıyoruz.
   // Ogrenci emre = Ogrenci(); // bu şekilde yaptığımızda ogrenci classını emre kodadıyla açmış oluyoruz.
